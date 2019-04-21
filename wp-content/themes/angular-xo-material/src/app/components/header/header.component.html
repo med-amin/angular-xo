@@ -1,0 +1,40 @@
+<!-- header -->
+<header>
+	<div class="container-fluid">
+		<div class="header d-lg-flex justify-content-between align-items-center py-3 px-sm-3">
+			<!-- logo -->
+			<div id="logo">
+				<h1><a [routerLink]="['/']" ><img style="max-width: 166px;" src="//www.axelites.com/wp-content/uploads/2019/02/logo-axelites.png"> </a></h1>
+			</div>
+			<!-- //logo -->
+			<!-- nav -->
+			<div class="nav_w3ls">
+				<nav>
+					<label for="drop" class="toggle">Menu</label>
+					<input type="checkbox" id="drop" />
+					<nav mat-tab-nav-bar >
+						<ul  *ngFor="let item of navItemsRight" class="menu">
+							<li><a   class="drop-text"
+							   [routerLink]="item.url"  routerLinkActive #rla="routerLinkActive"
+								   [routerLinkActiveOptions]="{exact: item.meta && item.meta.xo_menu_item_router_exact}">{{item.title}}</a></li>
+						</ul>
+
+					</nav>
+				</nav>
+			</div>
+			<!-- //nav -->
+			<div class="d-flex mt-lg-1 mt-sm-2 mt-3 justify-content-center">
+				<!-- search -->
+				<div class="search-w3layouts mr-3">
+					<form action="#" method="post" class="search-bottom-wthree d-flex">
+						<input class="search" type="search" placeholder="Search Here..." required="">
+						<button class="form-control btn" type="submit"><span class="fa fa-search"></span></button>
+					</form>
+				</div>
+				<!-- //search -->
+
+			</div>
+		</div>
+	</div>
+</header>
+<!-- //header -->

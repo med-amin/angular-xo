@@ -1,0 +1,15 @@
+//@import '../../shared/_variables.scss';
+
+:host {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+
+	::ng-deep {
+		.mat-tab-nav-bar {
+
+		}
+	}
+}
